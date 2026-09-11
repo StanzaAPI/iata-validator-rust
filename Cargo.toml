@@ -1,0 +1,18 @@
+[package]
+name = "stanzaapi-iata-validator"
+version = "1.0.0"
+edition = "2021"
+authors = ["Stanza"]
+description = "Official high-speed Rust client for IATA Air Cargo AWB & Aviation Validator"
+license = "MIT"
+readme = "README.md"
+homepage = "https://stanzaapi.com/tools/iata-validator"
+repository = "https://github.com/StanzaAPI/iata-validator-rust"
+keywords = ["iata-awb","air-cargo","aviation","airline-code","e-ticket"]
+categories = ["web-programming::http-client", "development-tools::ffi"]
+
+[dependencies]
+reqwest = { version = "0.12", default-features = false, features = ["json", "rustls-tls"] }
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+tokio = { version = "1.0", features = ["macros", "rt-multi-thread"], optional = true }
